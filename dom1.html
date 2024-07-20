@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>dom manipulation 1</title>
+<style>
+    .para{
+        color:white;
+        background-color:brown;
+        border:2px dotted black;
+        padding:20px 20px 20px 20px;
+        text-align:center;
+    }
+    .para1{
+        color:blue;
+        background-color:yellow;
+        border:2px dotted black;
+        padding:20px 20px 20px 20px;
+        text-align:center;
+    }
+</style>
+</head>
+<body>
+    <h1>how to add the class to the element by using add() method </h1>
+      <p id="p1">give me another css style through the event</p>
+    <button onclick="fun1()">click me</button>
+      <p id="p2"></p>
+     <h2>how to add class to the element by using .className property</h2>
+     <p id="p3">give me another css style by using .className property</p>
+     <button onclick="fun2()">click me</button>
+       <p id="p4"></p>
+       <button id="adeventlisnear">alert me</button>
+
+     <script>
+        function fun1(){
+       var a=document.getElementById("p1");
+       a.classList.add("para");
+        }
+        function fun2(){
+            var b=document.getElementById("p3");
+            b.className = "para1";  
+        }
+       document.getElementById("adeventlisnear").addEventListener("onclick",function(){ alert("Hello World!"); });
+         
+
+      </script>
+
+      
+</body>
+</html>

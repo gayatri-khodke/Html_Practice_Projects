@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<style>
+   .para{ 
+     overflow:scroll;
+     width:250px;
+     height:150px;
+     border:2px solid red;
+     font-size:23px;
+   }
+</style>
+</head>
+<body>
+  <!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">-->
+<img src="laptop1.jpeg" usemap="#image_map">
+<map name="image_map">
+  <area alt="laptop" title="laptop" href="https://www.freepik.com/free-ai-image/bunch-flowers-with-pink-yellow-background_40600400.htm#query=natural%20flower&position=8&from_view=keyword&track=ais" coords="46,37,94,79" shape="rect">
+  <area alt="bowl" title="bowl" href="https://www.freepik.com/free-ai-image/bunch-flowers-with-pink-yellow-background_40600400.htm#query=natural%20flower&position=8&from_view=keyword&track=ais" coords="144,52,14" shape="circle">
+</map>
+<br><br><br>
+<p class="para" onscroll="fun()"> 
+  This is an example of using the <b> onscroll </b> attribute.
+  This is an example of using the  Hi, Welcome to the javaTpoint.com. This site is developed so that students may learn computer science related technologies easily. The javaTpoint.com is always providing an easy and in-depth tutorial on various technologies. No one is perfect in this world, and nothing is eternally best. But we can try to
+  </p>
+  <button onclick="fun1()">click and get class name</button>
+  <p id="p2"></p>
+
+  <script>
+    function fun(){
+      document.getElementsByClassName("para").style.color="red";
+      document.getElementsByClassName("para").style.background="lightgreen";
+    }
+    function fun1(){
+    let a=document.getElementsByClassName("para").className;
+    document.getElementById("p2").innerHTML="paragraph class name is"+a;
+    }
+  </script>
+</body>
+</html>

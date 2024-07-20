@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>layout no 3</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-image:url("nature1.JPEG");
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            
+        }
+        #nav{
+        list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color:black;
+            height:90px;
+            
+        }
+        li a{
+            background-color:crimson;
+            color:white;
+            margin: 0 11px;
+            padding:19px;
+            border:2px ridge white;
+            display:block;
+        }
+        li{
+            float:left;
+            margin:15px 0;
+        }
+        
+        #btn{
+            width:100px;
+            height:70px;
+            margin:11px 19px;
+            padding:19px;
+            color:white;
+            background-color:green;
+            border-radius:15px;
+            border:2px ridge white;
+            float:right;
+        }
+        #btn:hover{
+            background-color:crimson;
+        }
+
+        li a:hover{
+            background-color:green;
+
+        }
+        iframe{
+            width:24%;
+            height:500px;
+            float:left;
+            position:absolute;
+            top:0;
+            left:0;
+            margin:130px 3px 5px 250px;
+        }
+        #vertical-box{
+            width:15%;
+            height:500px;
+            position:static;
+            background-color:rgb(4, 43, 4,0.8);
+        }
+        footer{
+            position:fixed;
+            bottom:0;
+            height:20px;
+            width:100%;
+            background-color:slategray;
+            color:white;
+            padding:10px 40px 10px 10px;
+            margin:3px;
+            
+        }
+        footer h3:first-child{
+            float:right;
+        }
+        footer h3:last-child{
+            float:left;
+        }
+        .wrap{
+            width:57%;
+            height:500px;
+            float:right;
+            position:absolute;
+            top:0;
+            right:0;
+            margin:130px 4px 0 5px;
+            background-color:white;
+           
+        }
+        div.wrap>div{
+            width:200px;
+            height:300px;
+            background-color:hwb(0 34% 12% / 0.5);
+            color:white;
+            float:left;
+            margin:40px 10px;
+            padding:10px;
+            box-shadow:0 5px 10px 0 crimson;
+        }
+        #btn1{
+            position:relative;
+            bottom:0;
+        }
+        h2~button{
+            position:absolute;
+            bottom:0;
+        }
+        button{
+            margin:100px 20px 20px 50px;
+            padding:18px;
+            border:2px ridge black;
+            outline:1px ridge green;
+            background-color:rgba(25, 71, 179, 0.3);
+            border-radius:20px;
+        }
+        button:hover{
+            background-color:darkgreen;
+            color:white;
+            border-color:black;
+        }
+        #wrap1{
+            width:100%;
+            height:500px;
+            margin-top:30px;
+            margin-bottom:10px;
+        }
+        #vertical-box1{
+            background-color:green;
+            width:14%;
+            height:100%;
+            float:left;
+        }
+        #class-img{
+            width:25%; 
+            height:100%;
+            margin:3px 20px 5px 13px;
+           background-color:skyblue;
+            background-image:url("coding-img.JPEG");
+            background-size:cover;
+            float:right;
+        }
+        #contact{
+             width:57%;
+             height:100%;
+            margin:5px 5px 5px 5px;
+             background-color:white;
+             float:right;
+        }
+        #marquee{
+            width:100%;
+            height:30px;
+            background-color:white;
+            color:black;
+            border:1px outset green;
+        }
+        #share{
+            width:100%;
+            height:150px;
+            background-color:gray;
+            color:white;
+            position:absolute;
+           
+        }
+        #share1{
+            width:50%;
+            text-align:center;
+            float:left;
+            margin-top:20px;
+           
+        }
+        #share2{
+            width:50%;
+            text-align:center;
+            float:right;
+            margin-top:20px;
+        }
+        #last{
+            width:100%;
+            height:500px;
+            background-color:black;
+            color:white;
+            display:block;
+            text-align:center;
+        }
+        .sing{
+            width:22%;
+            height:410px;
+            position:fixed;
+            top:0;
+            right:0;
+            display:block;
+            z-index: 1;
+            background-color:none;
+            text-align:center;
+            border:none;
+            border-radius:14px;
+            margin:50px 100px 0 0;
+        }
+        fieldset{
+            width:80%;
+            height:100%;
+            margin:20px 0 0 0;
+            font-size:20px;
+            background-color:white;
+            border:4px ridge green;
+            outline:2px ridge darkgreen;
+            border-radius: 15px;
+        }
+        #sing-btn{
+            padding:10px;
+            width:100px;
+            height:50px;
+            background-color:green;
+        }
+        fieldset:hover{
+            background-color:rgba(140, 226, 140, 0.8);
+        }
+        span{
+            width:80px;
+            height:100px;
+        }
+        </style>
+    </head>
+    <body>
+    <ul id="nav">
+        <li id="nav1"><a href="  ">Home</a></li>
+        <li><a href="  ">Class</a></li>
+        <li><a href="  ">About</a></li>
+        <li><a href="  ">Contact</a></li>
+        <li><a href="  ">Live Class</a></li>
+        <li><a href="  ">Search job</a></li>
+        <li><a href="  ">Get sertificed</a></li>
+        <button id="btn">Sing up</button>
+    </ul>
+    <div id="marquee">
+        <marquee>
+        <h2>Hurry up! Learn coding by sharma sir. Live one-on-one session with pdf notes.</h2>
+       </marquee>
+    </div>
+    <div class="sing">
+    <form>
+        <fieldset>
+            <legend>sign-up</legend>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" value=" "><br><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" value=" "><br><br>
+            <label for="mobile-no">Mobile No:</label><br>
+            <input type="number" id="mobile-no" name="mobile-no" value=" "><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value=" "><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" value=" "><br>
+            <button id="sing-btn" onclick="myfinction()">Sign up</button>
+            <span>&#8680</span>
+        </fieldset>
+    </form>
+    </div>
+    <div id="vertical-box">
+
+    </div>
+    <iframe src=" https://web.learncodeonline.in/" style="border:2px solid red;" width="25%" height="500px" title="Iframe Example"></iframe>
+   <div class="wrap">
+    <center><h1>Enroll in Our classes</h1></center>
+    <div>
+     <h2>current Batch</h2>
+     <button>Enroll now</button>
+    </div>
+    <div>
+        <h2>current Batch</h2>
+        <button>Enroll now</button>
+    </div>
+    <div>
+        <h2>upcomming Batch</h2>
+        <button>Enroll now</button>
+    </div>
+   </div>
+   <div id="wrap1">
+    <div id="vertical-box1">
+    </div>
+   <div id="contact">
+   </div>
+    <div id="class-img">
+   </div>
+   </div>
+   <div id="share">
+    <div id="share1">
+    <h2>Contact us  through the mobile no</h2>
+    <h3>mo no:897698<br>
+    mo no:7020618823<br>
+    mo no:8036735074<br>
+    Richout our if you are facing any difficulty to get the subscription
+</h3>
+
+    </div>
+    <div id="share2">
+        <h2>Contact us  through the mobile no</h2>
+    <h3>mo no:897698<br>
+    mo no:7020618823<br>
+    mo no:8036735074<br>
+    Richout our if you are facing any difficulty to get the subscription
+</h3>
+    </div>
+   </div>
+   <div id="last">
+    <h1>share and follow us</h1>
+    <h1>we are here to support you</h1>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+    <a href="#" class="fa fa-snapchat-ghost"></a>
+    <a href="#" class="fa fa-skype"></a>
+    <a href="#" class="fa fa-android"></a>
+    <a href="#" class="fa fa-dribbble"></a>
+   </div>
+    <footer>
+    <h3>No copy right</h3>
+    <h3>Contact us Gayatripatil@org.com</h3>
+    </footer>
+
+
+ <script>
+
+  let element=document.getElementById("btn");
+   function myfunction(){
+    let sign=document.getElementByClassName("sign");
+ let element=document.getElementById("btn").innerHTML=
+ sign.style.display=block;
+   }
+ </script>
+    </body>
+</html>

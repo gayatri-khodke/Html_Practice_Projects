@@ -1,0 +1,194 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate your Persentage</title>
+    <link rel="stylesheet" href="grade-calculate.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Grade Calculating System</h1>
+    </div>
+    <div id="container">
+        <div class="body-container">
+               <form>
+                 <label for="English">English</label><br>
+                 <input type="text" id="English" name="English" class="input-field" required><br>
+                 <label for="Math">Math</label><br>
+                 <input type="text" id="Math" name="Math" class="input-field" required><br>
+                 <label for="Science">Science</label><br>
+                 <input type="text" id="Science" name="Science" class="input-field" required><br>
+                 <label for="Marathi">Marathi</label><br>
+                 <input type="text" id="Marathi" name="Marathi" class="input-field" required><br>
+                 <label for="History">History</label><br>
+                 <input type="text" id="History" name="History" class="input-field" required><br>
+                 <label for="Geography">Geography</label><br>
+                 <input type="text" id="Geography" name="Geography" class="input-field" required><br>
+                 <label for="Hindi">Hindi</label><br>
+                 <input type="text" id="Hindi" name="Hindi" class="input-field" required><br><br>
+                 <button type="button" onclick="calculate()">Calculate</button>
+                 <br>
+               </form>
+               <table>
+                <tr>
+                    <th>Total Marks</th>
+                    <th>500</th>
+                </tr>
+                <tr>
+                    <td>Obtain Marks</td>
+                    <td class="obtain-marks"></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td class="percentage"></td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td class="grade"></td>
+                </tr>
+               </table>
+               <table>
+               </table>
+    </div>
+    </div>
+ <script>
+   // console.log("Hello Gayatri");
+    function calculate(){
+   let inputfieldElement=document.querySelectorAll(".input-field");
+   let obtainMarksElement=document.querySelector(".obtain-marks");
+   let percentageElement=document.querySelector(".percentage");
+   let gradeElement=document.querySelector(".grade");
+   const inputValues = [];
+
+   inputfieldElement.forEach(function (inputfieldElement){
+    inputValues.push(number(inputfieldElement.value)); 
+   });
+ //console.log(inputValues);
+   var sum = inputValues.reduce(function(total,currentValue){
+    return total + currentValue;
+   },0);
+   //console.log(sum);
+   obtainedMarksElement.textContent = sum;
+   const per = (sum/600)*100;
+   percentageElement.textContent = per + "%";
+
+   if (per >= 90) {
+                gradeElement.textContent = "A+";
+            } else if (per >= 80) {
+                gradeElement.textContent = "A";
+            } else if (per >= 70) {
+                gradeElement.textContent = "B";
+            } else if (per >= 60) {
+                gradeElement.textContent = "C";
+            } else {
+                gradeElement.textContent = "D";
+            }
+ }
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate your Percentage</title>
+    <link rel="stylesheet" href="grade-calculate.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Grade Calculating System</h1>
+    </div>
+    <div id="container">
+        <div class="body-container">
+            <form>
+                <label for="English">English</label><br>
+                <input type="text" id="English" name="English" class="input-field" required><br>
+                <label for="Math">Math</label><br>
+                <input type="text" id="Math" name="Math" class="input-field" required><br>
+                <label for="Science">Science</label><br>
+                <input type="text" id="Science" name="Science" class="input-field" required><br>
+                <label for="Marathi">Marathi</label><br>
+                <input type="text" id="Marathi" name="Marathi" class="input-field" required><br>
+                <label for="History">History</label><br>
+                <input type="text" id="History" name="History" class="input-field" required><br>
+                <label for="Geography">Geography</label><br>
+                <input type="text" id="Geography" name="Geography" class="input-field" required><br>
+                <label for="Hindi">Hindi</label><br>
+                <input type="text" id="Hindi" name="Hindi" class="input-field" required><br><br>
+                <button type="button" onclick="calculate()">Calculate</button>
+                <br>
+            </form>
+            <table>
+                <tr>
+                    <th>Total Marks</th>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Obtained Marks</td>
+                    <td class="obtain-marks"></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td sclass="percentage"></td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td class="grade"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            // Select input elements
+            let inputFieldElements = document.querySelectorAll('.input-field');
+
+            // Select result elements
+            let obtainedMarksElement = document.querySelector(".obtain-marks");
+            let percentageElement = document.querySelector(".percentage");
+            let gradeElement = document.querySelector(".grade");
+
+            // Create an array to store input values
+            const inputValues = [];
+
+            inputFieldElements.forEach(function (inputFieldElement) {
+                inputValues.push(Number(inputFieldElement.value)); // Convert to a number
+            });
+
+            // Calculate the sum of input values
+            const sum = inputValues.reduce(function (total, currentValue) {
+                return total + currentValue;
+            }, 0);
+
+            //console.log(sum);
+
+            // Calculate the percentage
+            const percent =(sum / 600) * 100;
+            const per=parseFloat(percent.toFixed(2));
+            
+        
+           // console.log(per);
+            // Update the elements with the results
+            obtainedMarksElement.textContent = sum;
+            percentageElement.textContent = per + "%";
+
+            // Example grading logic (customize as needed)
+            if (per >= 90) {
+                gradeElement.textContent = "A+";
+            } else if (per >= 80) {
+                gradeElement.textContent = "A";
+            } else if (per >= 70) {
+                gradeElement.textContent = "B";
+            } else if (per >= 60) {
+                gradeElement.textContent = "C";
+            } else {
+                gradeElement.textContent = "D";
+            }
+        }
+    </script>
+</body>
+</html>

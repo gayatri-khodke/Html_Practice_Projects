@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>image slider using javascript</title>
+     <style>
+    *{
+      margin:0;
+      padding:0;
+      text-align:center;
+      font-size:26px;
+    }
+    body{
+        background-color: rgb(48, 139, 196);
+    }
+    #container{
+         width: 50%;
+         height:400px;
+         background-color:white;
+         margin-top:50px;
+         margin-left:370px;
+         box-shadow: 5px 5px 5px rgba(20, 4, 4, 0.6);
+
+    }
+    h1{
+        width:20%;
+        height:50px;
+        margin-top:30px;
+        margin-bottom:20px;
+        margin-left:600px;
+        padding:8px;
+        background-color:white;
+        box-shadow: 5px 5px 5px rgba(31, 13, 13, 0.6);
+
+    }
+    h2{
+        width:30%;
+        height:30px;
+        margin-left:488px;
+        padding:20px;
+        background-color:rgb(88, 155, 88);
+        box-shadow: 5px 5px 5px rgba(26, 9, 9, 0.6);
+
+        color:black;
+    }
+    #instruction{
+        width: 100%;
+        height:140px;
+        margin:5px;
+        margin-bottom:20px;
+        background-color:pink;
+        font-size:30px;
+    }
+    #result-div{
+         width:100%;
+         height:100px;
+         display:block;
+         text-align:left;
+         background-color:rgb(133, 11, 133,0.3);
+         border:4px ridge rgb(30, 1, 30);
+         outline:3px ridge white;
+         border-radius:20px;
+         color:black;
+         box-shadow: 5px 5px 5px rgba(11, 0, 0, 0.8);
+         margin:0px;
+    }
+    #start-button{
+         position:relative;
+         top:1px;
+    }
+    #next-button{
+     position:relative;
+     bottom:0px;
+    }
+    button{
+         width:20%;
+        height:60px;
+        /* margin-left:190px; */
+        border-radius:15px;
+        background-color:skyblue;
+        border:1px ridge rgb(1, 26, 36);
+        box-shadow: 5px 5px 5px rgba(17, 10, 10, 0.6);
+    }
+    button:hover{
+        background-color:rgb(61, 142, 61);
+    }
+    
+    
+        </style>
+    </head>
+    <body>
+        <h1>Lets play The Game</h1>
+        <h2>JUST FOLLOW ME</h2>
+    <div id="container">
+     <div id="box">
+        <div id="start-button">
+        <button onclick="start()">Start</button>
+        </div>
+        <div id="instruction">
+        </div>
+        <div id="result-div">
+        <p>Are you surprised? How i read your mind and give you correct anser. Even i didnt ask values which you hold in your mind.</p>
+        </div>
+        <div id="next-button">
+        <button onclick="next()">Next</button>
+        </div>
+     </div>
+    </div>
+
+    <script>
+        let displaybox = document.getElementById("instruction");
+        let numericArray = [18, 20, 10, 80, 60, 45, 36, 25, 40, 108, 400, 600, 1040, 420, 320, 360, 100, 25000, 2600, 28, 4, 50];
+        
+        for (let k = numericArray.length - 1; k > 0; k--) {
+            const j = Math.floor(Math.random() * (k + 1));
+            [numericArray[k], numericArray[j]] = [numericArray[j], numericArray[k]];
+        }
+        
+        var array = ["Lets start the game. just read the instruction carefully and follow it","Click the next button", "Imagine your friend gave you borrow no of rupees", "Now add the same amout again in that which your friend gave you", "Now I give you rupees. Add this all rupess", "Now divide this total rupees in two part","There is one needy person ask you for money. give him one part of money Which you divide in two part","Return your friends rupees","Get ready to know how much money do you have now"];
+        
+        let element = document.getElementById("instruction");
+        let i = 0;
+        
+        function next() {
+
+            if (i == 4) {
+                element.innerHTML = array[i];
+                displaybox.innerText = element.innerHTML + `${numericArray[2]}`;
+               
+            } else if (i < array.length) {
+                element.innerHTML = array[i];
+                displaybox.innerText = element.innerHTML;
+             
+            } else if (i == array.length) {
+                result();
+            }
+            else if(i==array.length+1){
+                createlement();
+            }
+            else if(i>array.length){
+                   reset();
+            }
+            i++;
+        }
+        
+        function result() {
+            let rup = numericArray[2];
+            let rupee = rup / 2;
+            element.innerHTML = `You have only ${rupee}`;
+            displaybox.innerText = element.innerHTML;
+            
+        }
+    function start(){
+        return i=0;
+
+    }
+        </script>
+        
+    </body>
+</html>

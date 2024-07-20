@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Image Slider Using JavaScript</title>
+    <style>
+        /* Your CSS styles here */
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 26px;
+        }
+
+        body {
+            background-color: rgb(48, 139, 196);
+        }
+
+        #container {
+            width: 50%;
+            height: 400px;
+            background-color: white;
+            margin-top: 50px;
+            margin-left: 370px;
+            box-shadow: 5px 5px 5px rgba(20, 4, 4, 0.6);
+        }
+
+        h1 {
+            width: 20%;
+            height: 50px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 600px;
+            padding: 8px;
+            background-color: white;
+            box-shadow: 5px 5px 5px rgba(31, 13, 13, 0.6);
+        }
+
+        h2 {
+            width: 30%;
+            height: 30px;
+            margin-left: 488px;
+            padding: 20px;
+            background-color: rgb(88, 155, 88);
+            box-shadow: 5px 5px 5px rgba(26, 9, 9, 0.6);
+            color: black;
+        }
+
+        #instruction {
+            width: 100%;
+            height: 200px;
+            margin: 5px;
+            margin-bottom: 20px;
+            background-color: pink;
+            font-size: 30px;
+        }
+
+        #created-div {
+            width: 100%;
+            display: relative;
+            top: 60%;
+            height: 230px;
+            display: none;
+            background-color: rgb(133, 11, 133);
+            border: 4px ridge rgb(30, 1, 30);
+            outline: 3px ridge white;
+            border-radius: 30px;
+            color: white;
+            box-shadow: 5px 5px 5px rgba(11, 0, 0, 0.8);
+        }
+
+        button {
+            width: 20%;
+            height: 60px;
+            border-radius: 15px;
+            background-color: skyblue;
+            border: 1px ridge rgb(1, 26, 36);
+            box-shadow: 5px 5px 5px rgba(17, 10, 10, 0.6);
+        }
+
+        button:hover {
+            background-color: rgb(61, 142, 61);
+        }
+
+        #restart-button {
+            display: none;
+        }
+
+        #restart-button button {
+            width: 20%;
+            height: 60px;
+            border-radius: 15px;
+            background-color: red;
+            border: 1px ridge rgb(1, 26, 36);
+            box-shadow: 5px 5px 5px rgba(17, 10, 10, 0.6);
+            color: white;
+        }
+
+        #restart-button button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lets play The Game</h1>
+    <h2>JUST FOLLOW ME</h2>
+    <div id="container">
+        <div id="box">
+            <button id="startButton" onclick="start()">Start</button>
+            <div id="instruction"></div>
+            <button onclick="next()">Next</button>
+        </div>
+        <div id="restart-button">
+            <button onclick="restartGame">Restart</button>
+        </div>
+    </div>
+
+    <script>
+        let displaybox = document.getElementById("instruction");
+        let numericArray = [18, 20, 10, 80, 60, 45, 36, 25, 40, 108, 400, 600, 1040, 420, 320, 360, 100, 25000, 2600, 28, 4, 50];
+
+        // Shuffle function goes here
+
+        var array = ["Lets start the game. just read the instruction carefully and follow it", "Click the next button", "Imagine your friend gave you borrow no of rupees", "Now add the same amount again in that which your friend gave you", "Now I give you rupees. Add this all rupess", "Now divide this total rupees in two parts", "There is one needy person asking you for money. Give him one part of money which you divided into two parts", "Return your friend's rupees", "Get ready to know how much money you have now"];
+
+        let element = document.getElementById("instruction");
+        let i = 0;
+        let newdiv;
+
+        function next() {
+            if (i == 4) {
+                element.innerHTML = array[i] + ` ${numericArray[2]}`;
+                displaybox.innerText = element.innerHTML;
+            } else if (i < array.length) {
+                element.innerHTML = array[i];
+                displaybox.innerText = element.innerHTML;
+            } else if (i == array.length) {
+                result();
+            } else if (i == array.length + 1) {
+                createlement();
+            } else if (i > array.length) {
+                reset();
+            }
+            i++;
+        }
+
+        function result() {
+            let rup = numericArray[2];
+            let rupee = rup / 2;
+            element.innerHTML = `You have only ${rupee}`;
+            displaybox.innerText = element.innerHTML;
+        }
+
+        function createlement() {
+            let parent = document.getElementById("box");
+            newdiv = document.createElement("div");
+            newdiv.id = "created-div";
+            newdiv.textContent = "Are you surprised? How I read your mind and give you the correct answer. Even I didn't ask values which you hold in your mind.";
+            parent.removeChild(displaybox);
+            parent.appendChild(newdiv);
+            newdiv.style.display = "inline";
+            showRestartButton();
+        }
+
+        function start() {
+            displaybox.style.display = "block";
+            if (newdiv) {
+                newdiv.style.display = "none";
+            }
+            i = 0;
+            next();
+            document.getElementById("startButton").style.display = "none"; // Hide the "Start" button after starting
+        }
+
+        function showRestartButton() {
+            const restartButton = document.createElement("button");
+            restartButton.textContent = "Restart";
+            restartButton.onclick = restartGame;
+            document.getElementById("box").appendChild(restartButton);
+        }
+
+        function restartGame() {
+            const parent = document.getElementById("box");
+            parent.removeChild(newdiv);
+            document.getElementById("startButton").style.display = "block"; // Show the "Start" button
+            element.innerHTML = "";
+            i = 0;
+        }
+    </script>
+    </script>
+</body>
+</html>

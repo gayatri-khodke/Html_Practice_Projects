@@ -1,0 +1,138 @@
+<Doctype html>
+    <html>
+        <head>
+            <title>simple layout 1</title>
+            <style>
+                body{
+                    font-family:Arial, Helvetica, sans-serif;
+                    background-color:slategray;
+                }
+                #wrapper{
+                   border:2px solid black;
+                   width:85%;
+                   height:1000px;
+                   background:white;
+                   margin:0 auto;
+                }
+                #header{
+                    background-color:crimson;
+                    height:100px;
+                    color:white;
+
+                }
+                #header h1{
+                    padding:50px 0 0 20px;
+
+                }
+                #menu{
+                    background:lightsalmon;
+                    border:3px dotted slateblue;
+                }
+                #menu ul{
+                    margin:0;
+                    padding:0;
+                }
+                #menu li{
+                    display:inline-block;
+                }
+                #menu li a{
+                    display:block;
+                    padding:10px 20px;
+                    text-decoration:none;
+                    color:black;
+                }
+                #menu li a:hover{
+                    background:crimson;
+                    color:white;
+                }
+                #content{
+                    background:lightblue;
+                    width:900px;
+                    float:left;
+                    min-height:600px;
+                    box-sizing:border-box;
+                    padding:10px;
+                }
+                #sidebar{
+                    background:goldenrod;
+                    width:380px;
+                    float:right;
+                    min-height:600px;
+                }
+                #sidebar a{
+                    text-decoration:none;
+                    color:black;
+                }
+                #footer{
+                    background:skyblue;
+                    clear:both;
+                    height:100px;
+                    margin-top:20px;
+                    text-align:center;
+                }
+            </style>
+        </head>
+        <body>
+           <div id="wrapper"> 
+                <div id="header">
+                    
+                  <h1>Yahoo Baba  </h1> 
+                </div>
+                <div  id="menu"> 
+                   <ul>
+                    <li><a href=" ">Home</a></li>
+                    <li><a href=" ">About us</a></li>
+                    <li><a href=" ">Gallary</a></li>
+                    <li><a href=" ">Contact Us</a></li>
+                </ul>
+
+                </div>
+                <div id="content">
+                    <h2>Design Basic Layout content</h2>
+                    <center>
+                    <button type="button" onclick="myFunction2()">new text color</button>
+                    <button type="button" onclick="myFunction3()">Reseat</button>
+                    </center>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit quidem at est ullam, voluptatibus provident qui ex error magni. Quisquam odio assumenda illo iusto excepturi sit consectetur, corporis sequi, nemo, ut consequuntur voluptatum voluptate dolor. Libero esse asperiores, tempora excepturi sequi maiores eos velit accusamus neque amet quia fugit adipisci ad. Quibusdam, perferendis! Nostrum quisquam a possimus numquam provident aliquam expedita, tempore deserunt adipisci reiciendis amet quo sunt temporibus tenetur laborum, voluptatum asperiores quas. Enim, officia repellendus soluta dolore sint consequuntur earum quas dolorum maxime aperiam adipisci, dolorem pariatur quis accusamus consequatur quod eligendi repudiandae cupiditate eius quos doloremque libero?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptates, culpa eos eligendi cupiditate accusamus quaerat reiciendis earum excepturi. Cumque repudiandae consequatur, sunt voluptatum ipsam sequi, molestias delectus aliquid eum esse optio, dolores eveniet qui? Totam quaerat consequatur provident esse eaque velit aperiam nemo itaque repellendus. Ea provident, laborum temporibus consequuntur similique sunt perspiciatis voluptas perferendis quod sit nisi fugit pariatur eaque ad sequi blanditiis. Deserunt minima voluptates iusto rerum odio nostrum autem, labore blanditiis, beatae quasi laboriosam dicta eos esse, temporibus numquam id optio? Nemo dicta aliquid at cum voluptatibus autem illum, debitis incidunt? Distinctio, aspernatur totam. Iusto, corporis.</p>
+             <center><button type="button" onclick="myFunction()">click me</button><br><br>
+               <button type="button" onclick="myFunction1()">Reseat the color</button>
+              </center>   
+            </div>
+                <div id="sidebar">
+                   <ul>
+                      <li><a href=" ">Home</a></li>
+                      <li><a href=" ">About us</a></li>
+                      <li><a href=" ">Gallary</a></li>
+                     <li><a href=" ">Contact Us</a></li>
+                   </ul>   
+                   <center><button type="button" onclick="myFunction4()">click me</button></center>
+                </div>
+                <div id="footer">
+                    Yahoobaba2019@org.com
+                </div>
+               
+           </div>
+           <script>
+           let myFunction=function(){
+            document.getElementById("content").style.backgroundColor="gray";
+             }
+             let myFunction1=function(){
+            document.getElementById("content").style.backgroundColor="pink";
+             }
+             let myFunction2=function(){
+            document.getElementById("content").style.color="blue";
+             }
+             let myFunction3=function(){
+            document.getElementById("content").style.color="black";
+             }
+             let myFunction4=function(){
+            document.getElementById("sidebar").src="c:\Users\gayatri\Documents\New folder\room2.webp";
+             }
+
+             
+
+
+           </script>
+        </body>
+    </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>room suffling project</title>
+        <style>
+         body{
+            background-color:cadetblue;
+
+          }
+          div{
+            background-color:white;
+            width:50%;
+            height:50px;
+          }
+          #wrap{
+            width:70%;
+            height:600px;
+            margin:30px 0px 0px 200px;
+            background-color:darkslategray;
+            border:3px solid blue;
+          }
+          table{
+            width:70%;
+            height:250px;
+          }
+          p{
+            color:black;
+          }
+         #tr1{
+            background-color:white;
+            color:black;
+            width:80%;
+            height:100px;
+          }
+          #demo1{
+            width:32%;
+            text-align:center;
+            height:100px;
+          }
+          #demo2{
+            width:32%;
+            text-align:center;
+            height:100px;
+          }
+          #demo3{
+            width:33%;
+            text-align:center;
+            height:100px;
+          }
+          #heading{
+            width:auto;
+            height:100px;
+          }
+          .th{
+            width:30%;
+            height:50px;
+          }
+          </style>
+          </head>
+          <body>
+            <div id="wrap">
+    <center><div>
+      
+      <p id="demo"></p>
+     </div>
+    <button onclick="myFunction()">Try it</button>
+    <h1>suffel name randam order</h1>
+    <center><p id="demo"></p></center>
+    <br>
+        <table>
+          <tr id="heading">
+           <th class="th"><h3>Room no 1</h3></th>
+           <th class="th"><h3>Room no 2</h3></th>
+           <th class="th"><h3>Room no 3</h3></th>
+          </tr>
+      <tr id="tr1">
+        <td id="demo1"></td>
+        <td id="demo2"></td>
+        <td id="demo3"></td>
+      </tr>
+    </table>
+    </div>
+    <script>
+    const points = ["gayu","priya","sanju","minna","kartik","raju","kiran","payal","sarika","samiksha","trupti","mohini","pranita","samiksha"];
+    document.getElementById("demo").innerHTML = points;  
+    
+    function myFunction() {
+      points.sort(function(){return 0.5 - Math.random()});
+      document.getElementById("demo").innerHTML = points;
+        // myfunction1();
+        // myfunction2();
+        // myfunction3();
+    
+    }
+    // function myfunction1(){
+    // const divide1=points.slice(0,5);
+    // let text1=" ";
+    // divide1.forEach(function(value){
+    //   text1+=value+"<br>";
+    // });
+    // document.getElementById("demo1").innerHTML=text1;
+    // }
+    // function myfunction2(){
+    // const divide2=points.slice(5,9);
+    // let text2=" ";
+    // divide2.forEach(function(value){
+    //   text2+=value+"<br>";
+    // });
+    // document.getElementById("demo2").innerHTML=text2;
+    // }
+    // function myfunction3(){
+    // const divide3=points.slice(9,13);
+    // let text3=" ";
+    // divide3.forEach(function(value){
+    //   text3+=value+"<br>";
+    // });
+    // document.getElementById("demo3").innerHTML=text3;
+    // }
+      </script>
+    </body>
+    </html>

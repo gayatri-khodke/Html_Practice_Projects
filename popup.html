@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup contact box</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-image:url(img/nature4.jpeg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            backdrop-filter:blur(6px);
+        }
+        .container{
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+            width:100%;
+            height:100vh;
+            font-size:34px;
+        }
+        .contact-div{
+                background-color:rgba(207, 161, 156, 0.89);
+                color:block;
+                font-size:20px;
+                padding:16px;
+                display:block;   
+                box-shadow:4px 4px 3px rgb(24, 18, 18);   
+        }
+        .Pop-box{
+            background-color: rgb(117, 151, 184);
+            padding:10px;
+            display:none;
+            width:30%;
+        }
+         form{
+            background-color: rgb(117, 151, 184);
+            padding:10px;
+            width:100%;
+        } 
+        form input{
+            padding:6px;
+            width:95%;
+        }
+        #submit{
+            padding:10px;
+            background-color:royalblue;
+        }
+        #btn{
+            padding:29px;
+            background-color:aquamarine;
+            border-radius:20px;
+            font-size:20px;
+            margin-left:150px;
+            box-shadow:8px 7px 4px rgb(47, 37, 100);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="contact-div">
+        <h1>Having a good skills it is easy to get job </h1>
+       <br><br><br>
+        <h2>Lets came and join our classes.</h2>
+        <br><br><br>
+        <h2>For more information just reach out us.</h2>
+       <br><br><br>
+        <button id="btn" onclick="button()">Contact us</button>
+        <button onclick="back">back</button>
+     </div>
+     <div class="Pop-box">
+        <form>
+            <fieldset>
+                <legend>Sign-In-Form</legend>
+                <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        <br>
+        <label for="message">Mo no:</label>
+        <input type="number" id="message" name="message"  required>
+        <br>
+        <input type="submit" id="submit" value="Submit">
+ </fieldset>
+    </form>
+     </div>
+    </div>
+     <script>
+        let btn=document.getElementById("btn");
+        function button(){
+        let displayForm=document.getElementByClass(".pop-box");
+        displayForm.style.display="block";
+        }
+     </script>
+
+</body>
+</html>

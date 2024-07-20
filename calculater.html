@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+        body {
+            background-image: url('img/nature4.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .calculator-div {
+            max-width:50%;
+            background-color: rgb(126, 194, 200);
+            text-align: center;
+            box-shadow: 8px 8px 4px gray;
+        }
+        form {
+            margin:30px 10px;
+        }
+        #answer {
+            height: 60px;
+            width: 90%;
+            font-size: 35px;
+            margin:0px 6px;
+            background-color: rgb(255, 255, 255, 0.9);
+        }
+        input:hover {
+            box-shadow: 10px 10px 10px #741616;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            background-color: rgba(72, 37, 198, 0.42);
+            border: 2px solid rgba(72, 37, 198, 0.6); 
+        }
+        .row input {
+            flex: 1 1 auto;
+            padding: 20px;
+            margin: 0;
+        }
+        @media screen and (min-width:400px) and (max-width:650px){
+            .calculator-div{
+                width:60%;
+            }
+            .form input, .row input{
+                padding:6px;
+            }
+            #clear{
+                font-size:15px;
+            }
+        }
+       @media screen and (max-width:400px){
+        .calculator-div{
+            width:90%;
+            height:370px;
+            font-size:21px;
+        }
+        .form input,.row input{
+            padding:10px;
+            font-size:16px;
+        }
+        .row{
+            margin:3px;
+        }
+        #clear{
+                font-size:10px;
+            }
+        #answer{
+            height:40px;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="calculator-div">
+        <form name="forms">
+            <input type="text" id="answer" name="answer" value="gayatri"><br><br>
+            <div class="row">
+                <input type="button" value="0" onclick="forms.answer.value += '0'">
+                <input type="button" value="." onclick="forms.answer.value += '..'">
+                <input type="button" value="+" onclick="forms.answer.value += '+'">
+                <input type="button" value="-" onclick="forms.answer.value += '-'">
+            </div>
+            <div class="row">
+                <input type="button" value="1" onclick="forms.answer.value += '1'">
+                <input type="button" value="2" onclick="forms.answer.value += '2'">
+                <input type="button" value="3" onclick="forms.answer.value += '3'">
+                <input type="button" value="/" onclick="forms.answer.value += '/'">
+            </div>
+            <div class="row">
+                <input type="button" value="4" onclick="forms.answer.value += '4'">
+                <input type="button" value="5" onclick="forms.answer.value += '5'">
+                <input type="button" value="6" onclick="forms.answer.value += '6'">
+                <input type="button" value="*" onclick="forms.answer.value += '*'">
+            </div>
+            <div class="row">
+                <input type="button" value="7" onclick="forms.answer.value += '7'">
+                <input type="button" value="8" onclick="forms.answer.value += '8'">
+                <input type="button" value="9" onclick="forms.answer.value += '9'">
+                <input type="button" value="00" onclick="forms.answer.value += '0'">
+            </div>
+            <div class="row">
+                <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+                <input type="button" value="AC" onclick="forms.answer.value = forms.answer.value.toString().slice(0, -1)">
+                <input type="button" value="Clear All" id="clear" onclick="forms.answer.value=' '">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

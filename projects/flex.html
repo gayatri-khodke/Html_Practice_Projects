@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout using flex property</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            display:flex;
+            flex-direction:column;
+            height:100vh;
+        }
+        .item1, .item3{
+            background-color:rgb(3, 35, 47);
+            color:white;
+            padding:20px;
+            margin:1px;
+        }
+        .item2{
+             display:flex;
+             flex-wrap:wrap;
+             background-color:skyblue;
+             color:black;
+             padding:10px;
+             margin:10px;
+            
+        }
+        .box1{
+            background-color:rgb(16, 169, 87);
+            margin:10px;
+            padding:10px;
+            flex:2;
+        }
+        .box2{
+            margin:10px;
+            padding:10px;
+            background-color:rgb(58, 209, 176);
+            flex:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">
+            <h1>Welcome To our website</h1>
+        </div>
+        <div class="item2">
+            <div class="box1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, temporibus ducimus. Quia, earum? Quam magni quo quos? Et qui architecto numquam, aspernatur neque molestiae nostrum, ullam expedita ab illum nam. In id quasi eveniet, magnam praesentium deserunt! Blanditiis perferendis, quam ducimus maxime delectus quaerat impedit commodi, eos minus corporis eius. Accusamus ea commodi amet dicta neque magnam quae sequi eum cupiditate dolorem eveniet praesentium quia eligendi deleniti soluta provident facilis dolorum, aut doloremque sit voluptates ad officiis minus excepturi. Cumque dignissimos accusantium perspiciatis porro nisi qui suscipit optio vel ut, maxime beatae modi, facere sequi laboriosam amet velit eveniet, debitis natus explicabo pariatur accusamus! Explicabo nulla veniam accusamus ea illum voluptates laudantium quidem voluptatum vel pariatur quod aliquid maxime unde dolor doloremque voluptatem nihil ratione, natus consectetur harum consequatur repellat officia! Saepe consectetur quisquam aut earum sit, non sint quas animi cumque possimus dolor totam reprehenderit quae? Nobis, accusantium expedita. Cumque earum beatae nostrum nisi numquam. Illo natus sint ut omnis? Recusandae veniam qui sunt amet laboriosam ad numquam similique assumenda aspernatur tempore esse ea eligendi minima inventore at, officiis unde deserunt incidunt consectetur magni autem repellat a. Facilis aliquam sint debitis veniam quaerat quas quidem modi distinctio ipsam delectus.</p>
+
+            </div>
+            <div class="box2">
+                <ul>
+                    <li>Home</li>
+                    <li>Class</li>
+                    <li>projects</li>
+                    <li>about us</li>
+                    <li>Reach out us</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore unde sit aliquid aperiam in suscipit eius dolor iste eum placeat repudiandae quo praesentium quibusdam accusantium, ipsa molestias harum obcaecati minima illo! Magni accusantium ullam earum vero voluptatem minima praesentium aliquid deserunt repudiandae a labore, dicta sunt beatae explicabo reiciendis aliquam unde quos distinctio placeat alias possimus aspernatur laudantium nobis. Ipsam ullam recusandae aut ex, adipisci harum voluptate tempora iure ipsa maxime nesciunt laborum eum quas a in nisi pariatur atque obcaecati culpa eaque cum quibusdam. Facere illum ea voluptate iste. Officia vitae et doloremque iure corrupti soluta corporis esse!</p>
+
+            </div>
+        </div>
+        <div class="item3">
+            <h1>@wschool.org copy right</h1>
+        </div>
+    </div>
+    
+</body>
+</html>

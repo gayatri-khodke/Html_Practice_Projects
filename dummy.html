@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchgallary.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttons">
+        <button class="btn" onclick="filterItems('all')">Show All</button>
+        <button class="btn" onclick="filterItems('bike')">Bikes</button>
+        <button class="btn" onclick="filterItems('car')">Cars</button>
+        <button class="btn" onclick="filterItems('cycle')">Cycles</button>
+        <button class="btn" onclick="filterItems('cycle')">scooter</button>
+        <button class="btn" onclick="filterItems('cycle')">Auto</button>
+        <button class="btn" onclick="filterItems('cycle')">truck</button>
+
+    </div>
+    <div class="objects">
+        <div class="box" data-filter="bike"><img src="./img/bike3.jpeg" alt="Bike"></div>
+        <div class="box" data-filter="bike"><img src="./img/bike1.jpeg" alt="Bike"></div>
+        <div class="box" data-filter="bike"><img src="./img/bike2.jpeg" alt="Bike"></div>
+        <div class="box" data-filter="bike"><img src="./img/bike4.jpeg" alt="Bike"></div>
+        <div class="box" data-filter="bike"><img src="./img/bike5.jpeg" alt="Bike"></div>
+        <div class="box" data-filter="bike"><img src="./img/bike2.jpeg" alt="Bike"></div>
+        <!-- Add more image boxes with appropriate data-filter attribute -->
+
+        <div class="box" data-filter="car"><img src="./img/car1.jpeg" alt="Car"></div>
+        <div class="box" data-filter="car"><img src="./img/car2.jpeg" alt="Car"></div>
+        <div class="box" data-filter="car"><img src="./img/car3.jpeg" alt="Car"></div>
+        <div class="box" data-filter="car"><img src="./img/car5.jpeg" alt="Car"></div>
+        <div class="box" data-filter="car"><img src="./img/car6.jpeg" alt="Car"></div>
+        <div class="box" data-filter="car"><img src="./img/car6.jpeg" alt="Car"></div>
+        <!-- Add more image boxes with appropriate data-filter attribute -->
+
+        <div class="box" data-filter="cycle"><img src="./img/cycle2.jpeg" alt="Cycle"></div>
+        <div class="box" data-filter="cycle"><img src="./img/cycle1.jpeg" alt="Cycle"></div>
+        <div class="box" data-filter="cycle"><img src="./img/cycle7.jpeg" alt="Cycle"></div>
+        <div class="box" data-filter="cycle"><img src="./img/cycle8.jpeg" alt="Cycle"></div>
+        <div class="box" data-filter="cycle"><img src="./img/cycle1.jpeg" alt="Cycle"></div>
+        <!-- Add more image boxes with appropriate data-filter attribute -->
+    </div>
+
+    <script>
+        function filterItems(filter) {
+            const allBoxes = document.querySelectorAll('.box');
+            allBoxes.forEach(function(box) {
+                const dataFilter = box.getAttribute('data-filter');
+                if (filter === 'all' || filter === dataFilter) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
